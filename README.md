@@ -4,6 +4,8 @@
 
 Github: https://github.com/alexpapados/W-PINNs-DE-Hydrodynamic-Shock-Tube-Problems/blob/main/Solving_Hydrodynamic_Shock_Tube_Problems_Using_W_PINNs_DE.pdf
 
+ResearchGate: https://www.researchgate.net/publication/350190509_Solving_Hydrodynamic_Shock-Tube_Problems_Using_Weighted_Physics-Informed_Neural_Networks_with_Domain_Extension
+
 ---------------------------------------------------------------------------------------------------------------------------------
 This repository is dedicated to provide users of interests with the ability to solve hydrodynamic shock-tube problems using 
 Weighted Physics-Informed Neural Networks with Domain Extension (W-PINNs-DE). This repository contains the six test hydrodynamic shock-tube problems 
