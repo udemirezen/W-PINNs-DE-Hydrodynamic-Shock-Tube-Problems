@@ -163,8 +163,7 @@ def main():
 
     # Loss and optimizer
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-    pde = open("loss_pde.txt", "w")
-    ic = open("loss_ic.txt", "w")
+    
     # Train PINNs
     def train(epoch):
         model.train()
@@ -178,8 +177,6 @@ def main():
             # Print iteration, loss of PDE and ICs
             print(f'epoch {epoch} loss_pde:{loss_pde:.8f}, loss_ic:{loss_ic:.8f}')
             loss.backward()
-            pde.write(str(to_numpy(loss_pde)) + "\n")
-            ic.write(str(to_numpy(loss_ic)) + "\n")
             return loss
 
         # Optimize loss function
@@ -195,8 +192,6 @@ def main():
         train(epoch)
     toc = time.time()
     print(f'Total training time: {toc - tic}')
-    pde.close()
-    ic.close()
 
     # Evaluate on entire computational domain
     u_pred = to_numpy(model(x_test))
